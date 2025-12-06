@@ -1,0 +1,390 @@
+{
+  "Flu": {
+    "description": "Influenza (flu) is a contagious respiratory illness caused by influenza viruses that infect the nose, throat, and sometimes the lungs.",
+    "precautions": [
+      "Get vaccinated annually",
+      "Wash hands frequently",
+      "Avoid close contact with sick people",
+      "Cover coughs and sneezes",
+      "Stay home when sick"
+    ],
+    "medications": [
+      "Antiviral drugs (Tamiflu, Relenza)",
+      "Acetaminophen for fever",
+      "Ibuprofen for pain",
+      "Decongestants",
+      "Cough suppressants"
+    ],
+    "diet": [
+      "Drink plenty of fluids (water, warm tea, soup)",
+      "Eat light, easy-to-digest foods",
+      "Consume vitamin C rich foods",
+      "Chicken soup",
+      "Avoid alcohol and caffeine"
+    ],
+    "severity": "Moderate",
+    "specialist": "General Physician or Family Doctor"
+  },
+  "Common Cold": {
+    "description": "The common cold is a viral infection of your upper respiratory tract \u2014 your nose and throat. It's usually harmless, although it might not feel that way.",
+    "precautions": [
+      "Wash hands regularly",
+      "Avoid touching face",
+      "Stay away from sick people",
+      "Disinfect surfaces",
+      "Get adequate sleep"
+    ],
+    "medications": [
+      "Decongestants",
+      "Antihistamines",
+      "Pain relievers (acetaminophen, ibuprofen)",
+      "Cough syrup",
+      "Throat lozenges"
+    ],
+    "diet": [
+      "Warm liquids (tea, soup)",
+      "Honey and lemon",
+      "Vitamin C foods",
+      "Garlic",
+      "Ginger tea"
+    ],
+    "severity": "Mild",
+    "specialist": "General Physician"
+  },
+  "COVID-19": {
+    "description": "COVID-19 is a respiratory illness caused by the SARS-CoV-2 virus. It can range from mild to severe and may cause serious complications.",
+    "precautions": [
+      "Get vaccinated and boosted",
+      "Wear masks in crowded places",
+      "Maintain social distancing",
+      "Wash hands frequently",
+      "Isolate if infected",
+      "Improve ventilation indoors"
+    ],
+    "medications": [
+      "Consult doctor for antiviral medications",
+      "Acetaminophen for fever",
+      "Cough suppressants",
+      "Oxygen therapy if needed",
+      "Monoclonal antibodies (if eligible)"
+    ],
+    "diet": [
+      "Stay well hydrated",
+      "Protein-rich foods",
+      "Fruits and vegetables",
+      "Vitamin D supplements",
+      "Zinc-rich foods"
+    ],
+    "severity": "Moderate to Severe",
+    "specialist": "Infectious Disease Specialist or Pulmonologist"
+  },
+  "Migraine": {
+    "description": "A migraine is a headache that can cause severe throbbing pain or a pulsing sensation, usually on one side of the head, often accompanied by nausea and sensitivity to light and sound.",
+    "precautions": [
+      "Identify and avoid triggers",
+      "Maintain regular sleep schedule",
+      "Manage stress",
+      "Stay hydrated",
+      "Avoid bright lights and loud noises"
+    ],
+    "medications": [
+      "Triptans",
+      "NSAIDs (ibuprofen, naproxen)",
+      "Anti-nausea medications",
+      "Preventive medications (beta-blockers, antidepressants)",
+      "CGRP inhibitors"
+    ],
+    "diet": [
+      "Avoid trigger foods (aged cheese, processed meats)",
+      "Limit caffeine",
+      "Eat regular meals",
+      "Stay hydrated",
+      "Magnesium-rich foods"
+    ],
+    "severity": "Moderate",
+    "specialist": "Neurologist"
+  },
+  "Strep Throat": {
+    "description": "Strep throat is a bacterial infection that can make your throat feel sore and scratchy. It's caused by group A Streptococcus bacteria.",
+    "precautions": [
+      "Wash hands frequently",
+      "Don't share utensils or drinks",
+      "Cover mouth when coughing",
+      "Replace toothbrush after infection",
+      "Complete full antibiotic course"
+    ],
+    "medications": [
+      "Antibiotics (penicillin, amoxicillin)",
+      "Pain relievers",
+      "Throat lozenges",
+      "Anti-inflammatory medications"
+    ],
+    "diet": [
+      "Warm liquids (tea, soup)",
+      "Soft foods",
+      "Honey",
+      "Ice cream or popsicles",
+      "Avoid spicy or acidic foods"
+    ],
+    "severity": "Moderate",
+    "specialist": "General Physician or ENT Specialist"
+  },
+  "Gastroenteritis": {
+    "description": "Gastroenteritis is an inflammation of the digestive tract, particularly the stomach and intestines, usually caused by viral or bacterial infection.",
+    "precautions": [
+      "Wash hands thoroughly",
+      "Avoid contaminated food and water",
+      "Practice food safety",
+      "Stay hydrated",
+      "Isolate if contagious"
+    ],
+    "medications": [
+      "Oral rehydration solutions",
+      "Anti-diarrheal medications (if appropriate)",
+      "Antiemetics for nausea",
+      "Probiotics",
+      "Antibiotics (only if bacterial)"
+    ],
+    "diet": [
+      "BRAT diet (Bananas, Rice, Applesauce, Toast)",
+      "Clear liquids",
+      "Electrolyte drinks",
+      "Avoid dairy, fatty, and spicy foods",
+      "Gradually reintroduce solid foods"
+    ],
+    "severity": "Mild to Moderate",
+    "specialist": "Gastroenterologist"
+  },
+  "Pneumonia": {
+    "description": "Pneumonia is an infection that inflames the air sacs in one or both lungs, which may fill with fluid or pus, causing cough with phlegm, fever, chills, and difficulty breathing.",
+    "precautions": [
+      "Get vaccinated (pneumococcal, flu)",
+      "Practice good hygiene",
+      "Don't smoke",
+      "Maintain healthy immune system",
+      "Avoid sick people"
+    ],
+    "medications": [
+      "Antibiotics (for bacterial pneumonia)",
+      "Antivirals (for viral pneumonia)",
+      "Fever reducers",
+      "Cough medicine",
+      "Oxygen therapy if needed"
+    ],
+    "diet": [
+      "Plenty of fluids",
+      "Protein-rich foods",
+      "Fruits and vegetables",
+      "Warm liquids",
+      "Easy-to-digest foods"
+    ],
+    "severity": "Moderate to Severe",
+    "specialist": "Pulmonologist"
+  },
+  "Bronchitis": {
+    "description": "Bronchitis is an inflammation of the lining of your bronchial tubes, which carry air to and from your lungs. It often develops from a cold or other respiratory infection.",
+    "precautions": [
+      "Avoid smoking and secondhand smoke",
+      "Wash hands frequently",
+      "Get flu vaccine",
+      "Avoid air pollution",
+      "Use humidifier"
+    ],
+    "medications": [
+      "Cough medicine",
+      "Bronchodilators",
+      "Anti-inflammatory drugs",
+      "Antibiotics (if bacterial)",
+      "Mucolytics"
+    ],
+    "diet": [
+      "Warm fluids",
+      "Honey and lemon",
+      "Ginger tea",
+      "Turmeric milk",
+      "Avoid cold drinks"
+    ],
+    "severity": "Mild to Moderate",
+    "specialist": "Pulmonologist"
+  },
+  "Sinusitis": {
+    "description": "Sinusitis is an inflammation or swelling of the tissue lining the sinuses, often caused by infection, allergies, or other factors.",
+    "precautions": [
+      "Keep nasal passages moist",
+      "Avoid allergens",
+      "Use humidifier",
+      "Practice good hygiene",
+      "Manage allergies"
+    ],
+    "medications": [
+      "Decongestants",
+      "Nasal corticosteroids",
+      "Saline nasal irrigation",
+      "Pain relievers",
+      "Antibiotics (if bacterial)"
+    ],
+    "diet": [
+      "Spicy foods (to clear sinuses)",
+      "Warm liquids",
+      "Vitamin C foods",
+      "Garlic and onions",
+      "Avoid dairy (may increase mucus)"
+    ],
+    "severity": "Mild to Moderate",
+    "specialist": "ENT Specialist"
+  },
+  "Allergies": {
+    "description": "Allergies occur when your immune system reacts to a foreign substance such as pollen, pet dander, or certain foods.",
+    "precautions": [
+      "Identify and avoid triggers",
+      "Keep windows closed during high pollen",
+      "Use air purifiers",
+      "Wash bedding regularly",
+      "Shower after being outdoors"
+    ],
+    "medications": [
+      "Antihistamines",
+      "Nasal corticosteroids",
+      "Decongestants",
+      "Leukotriene modifiers",
+      "Immunotherapy (allergy shots)"
+    ],
+    "diet": [
+      "Anti-inflammatory foods",
+      "Quercetin-rich foods (apples, onions)",
+      "Omega-3 fatty acids",
+      "Probiotics",
+      "Avoid trigger foods"
+    ],
+    "severity": "Mild to Moderate",
+    "specialist": "Allergist or Immunologist"
+  },
+  "Food Poisoning": {
+    "description": "Food poisoning is an illness caused by eating contaminated food, usually by bacteria, viruses, or parasites.",
+    "precautions": [
+      "Practice food safety",
+      "Cook food thoroughly",
+      "Refrigerate perishables promptly",
+      "Wash hands and surfaces",
+      "Avoid cross-contamination"
+    ],
+    "medications": [
+      "Oral rehydration solutions",
+      "Anti-diarrheal medications (with caution)",
+      "Antiemetics",
+      "Antibiotics (if severe bacterial infection)",
+      "Probiotics"
+    ],
+    "diet": [
+      "Clear liquids initially",
+      "BRAT diet",
+      "Electrolyte drinks",
+      "Gradually reintroduce foods",
+      "Avoid dairy, fatty, and spicy foods"
+    ],
+    "severity": "Mild to Moderate",
+    "specialist": "General Physician or Gastroenterologist"
+  },
+  "Dengue": {
+    "description": "Dengue is a mosquito-borne viral infection causing flu-like illness and can develop into severe dengue, a potentially lethal complication.",
+    "precautions": [
+      "Use mosquito repellent",
+      "Wear protective clothing",
+      "Use mosquito nets",
+      "Eliminate standing water",
+      "Stay in air-conditioned areas"
+    ],
+    "medications": [
+      "Acetaminophen for fever (avoid aspirin/ibuprofen)",
+      "IV fluids for severe cases",
+      "Platelet transfusion if needed",
+      "No specific antiviral treatment",
+      "Hospitalization for severe dengue"
+    ],
+    "diet": [
+      "Plenty of fluids",
+      "Papaya leaf juice",
+      "Coconut water",
+      "Pomegranate juice",
+      "Vitamin C rich foods"
+    ],
+    "severity": "Moderate to Severe",
+    "specialist": "Infectious Disease Specialist"
+  },
+  "Malaria": {
+    "description": "Malaria is a life-threatening disease caused by parasites transmitted through the bites of infected mosquitoes.",
+    "precautions": [
+      "Use antimalarial medications when traveling",
+      "Sleep under mosquito nets",
+      "Use insect repellent",
+      "Wear protective clothing",
+      "Eliminate mosquito breeding sites"
+    ],
+    "medications": [
+      "Antimalarial drugs (chloroquine, artemisinin-based)",
+      "Fever reducers",
+      "IV fluids for severe cases",
+      "Hospitalization for complicated malaria"
+    ],
+    "diet": [
+      "High-calorie, high-protein diet",
+      "Plenty of fluids",
+      "Fresh fruits and vegetables",
+      "Easily digestible foods",
+      "Avoid fatty foods"
+    ],
+    "severity": "Severe",
+    "specialist": "Infectious Disease Specialist"
+  },
+  "Typhoid": {
+    "description": "Typhoid fever is a bacterial infection caused by Salmonella typhi, spread through contaminated food and water.",
+    "precautions": [
+      "Get vaccinated",
+      "Drink safe water",
+      "Eat properly cooked food",
+      "Practice good hygiene",
+      "Avoid street food in endemic areas"
+    ],
+    "medications": [
+      "Antibiotics (ciprofloxacin, azithromycin)",
+      "Fever reducers",
+      "IV fluids",
+      "Hospitalization for severe cases"
+    ],
+    "diet": [
+      "High-calorie, high-protein diet",
+      "Soft, easily digestible foods",
+      "Plenty of fluids",
+      "Avoid high-fiber foods initially",
+      "Gradual return to normal diet"
+    ],
+    "severity": "Severe",
+    "specialist": "Infectious Disease Specialist"
+  },
+  "Chronic Fatigue Syndrome": {
+    "description": "Chronic fatigue syndrome (CFS) is a complicated disorder characterized by extreme fatigue that lasts for at least six months and can't be fully explained by an underlying medical condition.",
+    "precautions": [
+      "Pace activities",
+      "Maintain sleep schedule",
+      "Manage stress",
+      "Avoid overexertion",
+      "Keep symptom diary"
+    ],
+    "medications": [
+      "Pain relievers",
+      "Antidepressants",
+      "Sleep aids",
+      "Medications for specific symptoms",
+      "Vitamin B12 supplements"
+    ],
+    "diet": [
+      "Balanced, nutritious diet",
+      "Small, frequent meals",
+      "Avoid sugar and processed foods",
+      "Stay hydrated",
+      "Consider elimination diet for food sensitivities"
+    ],
+    "severity": "Moderate",
+    "specialist": "Internal Medicine Specialist or Rheumatologist"
+  }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket Test</title>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+</head>
+<body>
+    <h1>WebSocket Connection Test</h1>
+    <div id="status">Connecting...</div>
+    <button onclick="testNotification()">Send Test Notification</button>
+    <div id="logs"></div>
+
+    <script>
+        const userId = 47; // Change this to your user ID
+        const socket = io('http://localhost:8000', {
+            path: '/ws/socket.io',
+            auth: {
+                user_id: userId,
+                token: localStorage.getItem('access_token') || 'test-token'
+            },
+            transports: ['websocket', 'polling']
+        });
+
+        function log(message) {
+            const logs = document.getElementById('logs');
+            logs.innerHTML += `<p>${new Date().toLocaleTimeString()}: ${message}</p>`;
+            console.log(message);
+        }
+
+        socket.on('connect', () => {
+            document.getElementById('status').innerHTML = '✅ Connected! Socket ID: ' + socket.id;
+            log('✅ Connected successfully!');
+        });
+
+        socket.on('disconnect', () => {
+            document.getElementById('status').innerHTML = '❌ Disconnected';
+            log('❌ Disconnected');
+        });
+
+        socket.on('notification', (data) => {
+            log('🔔 Notification received: ' + JSON.stringify(data));
+            alert('Notification: ' + data.title);
+        });
+
+        socket.on('connect_error', (error) => {
+            document.getElementById('status').innerHTML = '❌ Connection Error: ' + error.message;
+            log('❌ Connection error: ' + error.message);
+        });
+
+        function testNotification() {
+            fetch('http://localhost:8000/api/v1/test/test-notification', {
+                method: 'POST',
+                headers: {
+                    'Authorization': 'Bearer ' + (localStorage.getItem('access_token') || ''),
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(r => r.json())
+            .then(data => log('Test notification sent: ' + JSON.stringify(data)))
+            .catch(err => log('Error: ' + err));
+        }
+    </script>
+</body>
+</html>

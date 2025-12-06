@@ -1,0 +1,32 @@
+{
+  "c89e757b-5e22-4cc3-8d29-1d234abab569": {
+    "id": "c89e757b-5e22-4cc3-8d29-1d234abab569",
+    "filename": "wp9062199-daredevil-desktop-wallpapers.jpg",
+    "file_path": "E:\\FastAPI\\Hospital Management System\\hospital_backend\\backend\\uploads\\profile_pictures\\a0f1a9d2a9354629b722a60caee2e0e1.jpg",
+    "category": "profile_pictures",
+    "content_type": "image/jpeg",
+    "size": 96303,
+    "uploaded_by": 24,
+    "uploaded_at": "2025-11-29T14:01:55.797014"
+  },
+  "eb85cd01-0662-4146-82ff-85adffde5ee2": {
+    "id": "eb85cd01-0662-4146-82ff-85adffde5ee2",
+    "filename": "20240306_153027.jpg",
+    "file_path": "E:\\FastAPI\\Hospital Management System\\hospital_backend\\backend\\uploads\\profile_pictures\\d5269c1feaea40ec945643d5d8999ef0.jpg",
+    "category": "profile_pictures",
+    "content_type": "image/jpeg",
+    "size": 489458,
+    "uploaded_by": 24,
+    "uploaded_at": "2025-11-29T14:07:26.149198"
+  },
+  "37115ff4-ea95-46d4-8907-047ed7a31ceb": {
+    "id": "37115ff4-ea95-46d4-8907-047ed7a31ceb",
+    "filename": "medical_record_MR41780.pdf",
+    "file_path": "E:\\FastAPI\\Hospital Management System\\hospital_backend\\backend\\uploads\\medical_records\\1bbc233f093a4a3bb2d61625e003d29a.pdf",
+    "category": "medical_records",
+    "content_type": "application/pdf",
+    "size": 8639,
+    "uploaded_by": 24,
+    "uploaded_at": "2025-11-29T21:51:28.399968"
+  }
+}
