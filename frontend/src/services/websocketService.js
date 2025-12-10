@@ -13,7 +13,7 @@ class WebSocketService {
     console.log('🔌 WebSocketService: Attempting to connect with userId:', userId);
     console.log('🔌 WebSocketService: Token exists:', !!token);
 
-    this.socket = io('http://localhost:8000', {
+    this.socket = io('https://hospital-management-system-zt8o.onrender.com', {
       path: '/ws/socket.io',
       auth: {
         user_id: userId,
