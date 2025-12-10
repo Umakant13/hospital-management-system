@@ -80,4 +80,4 @@ websockets==15.0.1
 wsproto==1.2.0
 razorpay==1.3.0
 setuptools>=65.0.0
-
+joblib==1.4.2
