@@ -1,6 +1,5 @@
 import uvicorn
 import os
-from app.main import app
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
@@ -8,7 +7,6 @@ if __name__ == "__main__":
         "app.main:app",
         host="0.0.0.0",
         port=port,
-        ws="websockets",            # IMPORTANT
         proxy_headers=True,
-        forwarded_allow_ips="*"
+        forwarded_allow_ips="*",
     )
