@@ -19,7 +19,7 @@ class WebSocketService {
         user_id: userId,
         token: token,
       },
-      transports: ['websocket', 'polling'],
+      transports: ['polling'],
     });
 
     this.socket.on('connect', () => {
