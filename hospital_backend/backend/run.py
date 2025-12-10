@@ -1,10 +1,14 @@
 import uvicorn
-# from app.main import socket_app
+import os
+from app.main import app
 
 if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))
     uvicorn.run(
-        "app.main:socket_app",
+        "app.main:app",
         host="0.0.0.0",
-        port=8000,
-        reload=False
+        port=port,
+        ws="websockets",            # IMPORTANT
+        proxy_headers=True,
+        forwarded_allow_ips="*"
     )
