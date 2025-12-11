@@ -7,6 +7,7 @@ if __name__ == "__main__":
         "app.main:app",
         host="0.0.0.0",
         port=port,
+        ws="none",
         proxy_headers=True,
         forwarded_allow_ips="*",
     )
