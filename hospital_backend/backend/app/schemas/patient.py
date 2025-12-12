@@ -117,3 +117,9 @@ class DoctorWithUser(BaseModel):
 class PatientWithUser(PatientResponse):
     user: Optional[UserBase] = None
     primary_doctor: Optional[DoctorWithUser] = None
+
+   
+    @computed_field
+    @property
+    def full_name(self) -> str:
+        return self.user.full_name if self.user else "Unknown"
