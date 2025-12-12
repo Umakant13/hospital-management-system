@@ -29,8 +29,13 @@ class Settings(BaseSettings):
     REDIS_URL: str = "redis://localhost:6379"
     
     # CORS
-    CORS_ORIGINS: List[str] = ["http://localhost:3000"]
-    
+    CORS_ORIGINS: List[str] = [
+        "http://localhost:3000",
+        "http://localhost:5173",  # Local Vite default
+        "https://hospital-management-system-1-fkpk.onrender.com",  # Production Frontend
+        "https://hospital-management-system-zt8o.onrender.com",    # Production Backend
+    ]
+        
     # Email
     SMTP_HOST: Optional[str] = None
     SMTP_PORT: Optional[int] = None
