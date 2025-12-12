@@ -139,6 +139,7 @@ const MyPatients = () => {
 
   const filteredPatients = patients.filter(patient =>
     patient.full_name?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    patient.user?.full_name?.toLowerCase().includes(searchQuery.toLowerCase()) ||
     patient.patient_id?.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
@@ -213,11 +214,11 @@ const MyPatients = () => {
                       boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
                     }}
                   >
-                    {getInitials(patient.name || 'Patient')}
+                    {getInitials(patient.full_name || patient.user?.full_name || 'Patient')}
                   </Avatar>
                   <Box sx={{ flexGrow: 1 }}>
                     <Typography variant="h6" fontWeight="bold" sx={{ lineHeight: 1.2, mb: 0.5 }}>
-                      {patient.name || 'N/A'}
+                      {patient.full_name || patient.user?.full_name || 'N/A'}
                     </Typography>
                     <Chip
                       label={patient.patient_id}
@@ -325,7 +326,7 @@ const MyPatients = () => {
               {editMode ? 'Edit Patient Details' : 'Patient Details'}
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              {selectedPatient?.name} ({selectedPatient?.patient_id})
+              {selectedPatient?.full_name || selectedPatient?.user?.full_name} ({selectedPatient?.patient_id})
             </Typography>
           </Box>
           <IconButton onClick={handleCloseModal}>
