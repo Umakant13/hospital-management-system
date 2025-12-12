@@ -238,6 +238,15 @@ async def chat_response(request: ChatRequest):
     print(f"   API Key Present: {bool(settings.GROQ_API_KEY)}")
     if settings.GROQ_API_KEY:
         print(f"   API Key Length: {len(settings.GROQ_API_KEY)}")
+        # Strict validation debugging
+        raw_key = settings.GROQ_API_KEY
+        if raw_key.strip() != raw_key:
+            print("⚠️ WARNING: API Key contains leading/trailing whitespace!")
+        if raw_key.startswith('"') or raw_key.startswith("'"):
+            print("⚠️ WARNING: API Key appears to be wrapped in quotes! Remove them in Render dashboard.")
+        if raw_key.startswith("GROQ_API_KEY="):
+            print("⚠️ WARNING: API Key includes the variable name! Paste ONLY the value starting with 'gsk_'.")
+            
         print(f"   API Key Preview: {settings.GROQ_API_KEY[:10]}...{settings.GROQ_API_KEY[-5:]}")
     
     if not settings.GROQ_API_KEY:
