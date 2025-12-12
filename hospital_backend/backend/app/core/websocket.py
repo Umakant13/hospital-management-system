@@ -5,7 +5,8 @@ import asyncio
 # Create Socket.IO server with proper CORS configuration
 sio = socketio.AsyncServer(
     async_mode='asgi',
-    cors_allowed_origins=['http://localhost:3000', 'http://127.0.0.1:3000', 'http://localhost:8000', 'https://hospital-management-system-zt8o.onrender.com'],
+    cors_allowed_origins=['http://localhost:3000', 'http://127.0.0.1:3000', 'http://localhost:8000','https://hospital-management-system-1-fkpk.onrender.com',
+        'https://hospital-management-system-zt8o.onrender.com'],
     logger=True,
     engineio_logger=True,
     ping_timeout=60,
