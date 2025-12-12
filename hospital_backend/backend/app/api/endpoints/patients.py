@@ -201,7 +201,7 @@ async def get_patients(
     limit: int = Query(100, ge=1, le=100),
     search: str = Query(None),
     blood_group: str = Query(None),
-    doctor_id: int = Query(None),
+    doctor_id: str = Query(None),
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_active_user)
 ) -> Any:
@@ -220,7 +220,11 @@ async def get_patients(
         query = query.filter(Patient.blood_group == blood_group)
     
     if doctor_id:
-        query = query.filter(Patient.primary_doctor_id == doctor_id)
+        # Handle both internal ID (int) and Doctor ID (str "D1024")
+        if doctor_id.isdigit():
+            query = query.filter(Patient.primary_doctor_id == int(doctor_id))
+        else:
+            query = query.filter(Doctor.doctor_id == doctor_id)
     
     # Eager load the relationships
     patients = query.options(
