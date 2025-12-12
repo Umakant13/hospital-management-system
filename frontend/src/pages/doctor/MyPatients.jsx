@@ -138,7 +138,7 @@ const MyPatients = () => {
   };
 
   const filteredPatients = patients.filter(patient =>
-    patient.name?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    patient.full_name?.toLowerCase().includes(searchQuery.toLowerCase()) ||
     patient.patient_id?.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
