@@ -85,4 +85,5 @@ python-socketio[asgi]
 uvicorn[standard]
 websockets
 scikit-learn
+groq
 
