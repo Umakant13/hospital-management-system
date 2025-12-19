@@ -7,6 +7,8 @@ from app.api.deps import get_db, get_current_active_user, get_current_admin
 from app.models.patient import Gender, Patient
 from app.models.user import User, UserRole
 from app.models.doctor import Doctor
+from app.models.appointment import Appointment
+from sqlalchemy import func
 from app.schemas.patient import (
     PatientCreate,
     PatientUpdate,
@@ -226,19 +228,28 @@ async def get_patients(
         else:
             query = query.filter(Doctor.doctor_id == doctor_id)
     
-    # Eager load the relationships
-    patients = query.options(
+    
+    # Subquery for last visit
+    last_visit_sub = db.query(func.max(Appointment.appointment_date))\
+        .filter(Appointment.patient_id == Patient.id)\
+        .correlate(Patient)\
+        .scalar_subquery()
+
+    # Eager load the relationships and add last_visit
+    results = query.add_columns(last_visit_sub.label("last_visit")).options(
         joinedload(Patient.user),
         joinedload(Patient.primary_doctor).joinedload(Doctor.user)
     ).offset(skip).limit(limit).all()
     
-    #   result = []
-    # for patient in patients:
-    #     patient_dict = patient.__dict__
-    #     patient_dict['user'] = patient.user.__dict__
-    #     result.append(patient_dict)
+    # Process results - combine patient object with last_visit annotation
+    final_patients = []
+    for patient, last_visit in results:
+        # We can dynamically set the attribute on the ORM object
+        # Since it's not a DB column, this won't persist but will be serialized by Pydantic
+        setattr(patient, "last_visit", last_visit)
+        final_patients.append(patient)
     
-    return patients
+    return final_patients
 
 @router.get("/me/profile", response_model=PatientWithUser)
 async def get_my_profile(

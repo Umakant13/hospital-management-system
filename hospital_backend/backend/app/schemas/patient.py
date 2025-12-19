@@ -117,6 +117,7 @@ class DoctorWithUser(BaseModel):
 class PatientWithUser(PatientResponse):
     user: Optional[UserBase] = None
     primary_doctor: Optional[DoctorWithUser] = None
+    last_visit: Optional[datetime] = None
 
    
     @computed_field
