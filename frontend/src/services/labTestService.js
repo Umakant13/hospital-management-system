@@ -3,7 +3,7 @@ import api from './api';
 export const labTestService = {
   // Get all lab tests
   getAllLabTests: async (params = {}) => {
-    const response = await api.get('/lab-tests', { params });
+    const response = await api.get('/lab-tests/', { params });
     return response.data;
   },
 
@@ -15,7 +15,7 @@ export const labTestService = {
 
   // Create lab test
   createLabTest: async (testData) => {
-    const response = await api.post('/lab-tests', testData);
+    const response = await api.post('/lab-tests/', testData);
     return response.data;
   },
 
@@ -33,7 +33,7 @@ export const labTestService = {
 
   // Get test status distribution
   getStatusDistribution: async () => {
-    const response = await api.get('/lab-tests/analytics/status-distribution');
+    const response = await api.get('/lab-tests/analytics/status-distribution/');
     return response.data;
   },
 };

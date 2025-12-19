@@ -3,13 +3,13 @@ import api from './api';
 export const doctorService = {
   // Get all doctors
   getAllDoctors: async (params = {}) => {
-    const response = await api.get('/doctors', { params });
+    const response = await api.get('/doctors/', { params });
     return response.data;
   },
 
   // Get current doctor profile
   getProfile: async () => {
-    const response = await api.get('/doctors/me/profile');
+    const response = await api.get('/doctors/me/profile/');
     return response.data;
   },
 
@@ -21,7 +21,7 @@ export const doctorService = {
 
   // Create doctor
   createDoctor: async (doctorData) => {
-    const response = await api.post('/doctors', doctorData);
+    const response = await api.post('/doctors/', doctorData);
     return response.data;
   },
 
@@ -47,7 +47,7 @@ export const doctorService = {
 
   // Get doctor patients
   getDoctorPatients: async (doctorId) => {
-    const response = await api.get('/patients', {
+    const response = await api.get('/patients/', {
       params: { doctor_id: doctorId }
     });
     return response.data;
@@ -55,7 +55,7 @@ export const doctorService = {
 
   // Get doctor performance
   getDoctorPerformance: async (params = {}) => {
-    const response = await api.get('/doctors/analytics/performance', { params });
+    const response = await api.get('/doctors/analytics/performance/', { params });
     return response.data;
   },
   // Rate doctor

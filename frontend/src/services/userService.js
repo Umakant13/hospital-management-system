@@ -3,7 +3,7 @@ import api from './api';
 export const userService = {
   // Get all users (Admin only)
   getAllUsers: async (params = {}) => {
-    const response = await api.get('/users', { params });
+    const response = await api.get('/users/', { params });
     return response.data;
   },
 
@@ -15,7 +15,7 @@ export const userService = {
 
   // Create user
   createUser: async (userData) => {
-    const response = await api.post('/users', userData);
+    const response = await api.post('/users/', userData);
     return response.data;
   },
 
@@ -51,7 +51,7 @@ export const userService = {
 
   // Change password
   changePassword: async (currentPassword, newPassword) => {
-    const response = await api.post('/users/change-password', {
+    const response = await api.post('/users/change-password/', {
       current_password: currentPassword,
       new_password: newPassword,
     });

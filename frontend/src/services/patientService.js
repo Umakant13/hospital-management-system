@@ -3,7 +3,7 @@ import api from './api';
 export const patientService = {
   // Get current patient's profile
   getMyProfile: async () => {
-    const response = await api.get('/patients/me/profile');
+    const response = await api.get('/patients/me/profile/');
     return response.data;
   },
 
@@ -11,7 +11,7 @@ export const patientService = {
 
   // Get all patients
   getAllPatients: async (params = {}) => {
-    const response = await api.get('/patients', { params });
+    const response = await api.get('/patients/', { params });
     return response.data;
   },
 
@@ -23,7 +23,7 @@ export const patientService = {
 
   // Create patient
   createPatient: async (patientData) => {
-    const response = await api.post('/patients', patientData);
+    const response = await api.post('/patients/', patientData);
     return response.data;
   },
 
@@ -41,13 +41,13 @@ export const patientService = {
 
   // Get BMI distribution
   getBMIDistribution: async () => {
-    const response = await api.get('/patients/analytics/bmi-distribution');
+    const response = await api.get('/patients/analytics/bmi-distribution/');
     return response.data;
   },
 
   // Get age distribution
   getAgeDistribution: async () => {
-    const response = await api.get('/patients/analytics/age-distribution');
+    const response = await api.get('/patients/analytics/age-distribution/');
     return response.data;
   },
 };

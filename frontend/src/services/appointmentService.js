@@ -3,7 +3,7 @@ import api from './api';
 export const appointmentService = {
   // Get all appointments
   getAllAppointments: async (params = {}) => {
-    const response = await api.get('/appointments', { params });
+    const response = await api.get('/appointments/', { params });
     return response.data;
   },
 
@@ -15,7 +15,7 @@ export const appointmentService = {
 
   // Create appointment
   createAppointment: async (appointmentData) => {
-    const response = await api.post('/appointments', appointmentData);
+    const response = await api.post('/appointments/', appointmentData);
     return response.data;
   },
 
@@ -41,13 +41,13 @@ export const appointmentService = {
 
   // Get upcoming appointments
   getUpcomingAppointments: async (days = 7) => {
-    const response = await api.get('/appointments/upcoming', { params: { days } });
+    const response = await api.get('/appointments/upcoming/', { params: { days } });
     return response.data;
   },
 
   // Get appointment status distribution
   getStatusDistribution: async (params = {}) => {
-    const response = await api.get('/appointments/analytics/status-distribution', { params });
+    const response = await api.get('/appointments/analytics/status-distribution/', { params });
     return response.data;
   },
 };
