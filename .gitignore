@@ -1,0 +1,27 @@
+# System
+.DS_Store
+Thumbs.db
+
+# Environments
+venv/
+env/
+.env
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Render
+htmlcov/
+site/
+
+# IDE
+.idea/
+.vscode/

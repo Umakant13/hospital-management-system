@@ -277,10 +277,17 @@ async def chat_response(request: ChatRequest):
         from groq import Groq
         print("✅ Import successful!")
         
+        # Clean API Key
+        api_key = settings.GROQ_API_KEY.strip().strip('"').strip("'")
+        
         # Initialize Groq client
         print("\n🔧 Initializing Groq client...")
-        client = Groq(api_key=settings.GROQ_API_KEY)
-        print("✅ Client initialized!")
+        try:
+            client = Groq(api_key=api_key)
+            print("✅ Client initialized!")
+        except Exception as client_err:
+            print(f"❌ Failed to initialize client: {client_err}")
+            raise HTTPException(status_code=500, detail=f"Client initialization failed: {str(client_err)}")
         
         # Build messages array
         messages = []
@@ -300,13 +307,19 @@ async def chat_response(request: ChatRequest):
         print(f"   Model: llama-3.3-70b-versatile")
         print(f"   Messages: {len(messages)}")
         
-        # Generate response using Groq
-        chat_completion = client.chat.completions.create(
-            messages=messages,
-            model="llama-3.3-70b-versatile",  # Fast and capable model
-            temperature=0.7,
-            max_tokens=1024,
-        )
+        try:
+            # Generate response using Groq
+            chat_completion = client.chat.completions.create(
+                messages=messages,
+                model="llama-3.3-70b-versatile",  # Fast and capable model
+                temperature=0.7,
+                max_tokens=1024,
+            )
+        except Exception as api_err:
+            print(f"❌ Groq API Error: {str(api_err)}")
+            if "401" in str(api_err):
+                raise HTTPException(status_code=401, detail="Invalid Groq API Key. Please check your Render dashboard environment variables.")
+            raise api_err
         
         response_text = chat_completion.choices[0].message.content
         
