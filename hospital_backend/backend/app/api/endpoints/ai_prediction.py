@@ -279,6 +279,7 @@ async def chat_response(request: ChatRequest):
         
         # Clean API Key
         api_key = settings.GROQ_API_KEY.strip().strip('"').strip("'")
+        print(f"DEBUG: Used API Key: {api_key[:5]}...{api_key[-5:]} (Len: {len(api_key)})")
         
         # Initialize Groq client
         print("\n🔧 Initializing Groq client...")
@@ -341,6 +342,9 @@ async def chat_response(request: ChatRequest):
             status_code=500, 
             detail=f"Groq library not installed. Install with: pip install groq"
         )
+    except HTTPException:
+        # Re-raise HTTP exceptions (like the 401 from above)
+        raise
     except Exception as e:
         print(f"\n❌ UNEXPECTED ERROR:")
         print(f"   Error Type: {type(e).__name__}")

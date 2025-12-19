@@ -37,7 +37,7 @@ api.interceptors.response.use(
 
       try {
         const refreshToken = localStorage.getItem(REFRESH_TOKEN_KEY);
-        
+
         if (!refreshToken) {
           throw new Error('No refresh token');
         }
@@ -58,7 +58,9 @@ api.interceptors.response.use(
         localStorage.removeItem(TOKEN_KEY);
         localStorage.removeItem(REFRESH_TOKEN_KEY);
         localStorage.removeItem('user_data');
-        window.location.href = '/auth';
+        if (window.location.pathname !== '/auth') {
+          window.location.href = '/auth';
+        }
         return Promise.reject(refreshError);
       }
     }
